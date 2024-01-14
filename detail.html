@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details</title>
+    <link rel="stylesheet" type="text/css" href="details.css">
+</head>
+<body>
+
+<div class="container">
+    <label for="Uname"><b>Name:</b></label>
+    <input type="text" id="Uname" name="Name" placeholder=" "><br><br>
+   
+    <label for="Age"><b>Age :   </b></label>
+    <input type="text" id="Age" name="Age" placeholder=" "><br><br>
+
+    <form class="wrapper">
+        <label><b>Gender:</b></label>
+        <input type="radio" id="option1" name="gender">
+        <label for="option1">Male</label>
+        <input type="radio" id="option2" name="gender">
+        <label for="option2">Female</label><br><br>
+    </form>
+    
+    <label for="Weight"><b>Weight:</b></label>
+    <input type="text" id="Weight" name="Weight" placeholder=" "><br><br>
+   
+    <label for="Height"><b>Height:</b></label>
+    <input type="text" id="Height" name="Height" placeholder=" "><br><br>
+    
+    <form class="wrapper">
+        <label><b>Fitness Level:</b></label>
+        <input type="radio" id="beginner" name="fitnessLevel">
+        <label for="beginner">Beginner</label>
+        <input type="radio" id="intermediate" name="fitnessLevel">
+        <label for="intermediate">Intermediate</label>
+        <input type="radio" id="advanced" name="fitnessLevel">
+        <label for="advanced">Advanced</label>
+    </form>
+
+    <form>
+        <label><b>Medium Of Training:</b></label>
+        <input type="radio" id="yoga" name="trainingMedium">
+        <label for="yoga">Yoga</label>
+        <input type="radio" id="weightTraining" name="trainingMedium">
+        <label for="weightTraining">Weight Training</label>
+        <input type="radio" id="cardio" name="trainingMedium">
+        <label for="cardio">Cardio</label>
+    </form>
+</div>
+
+<button class="button" onclick="validateFormAndRedirect()" style="position: absolute; left: 48%; top: 65%;">
+    <span>Submit</span>
+</button>
+
+
+
+
+
+        
+        <script>
+            function validateFormAndRedirect() {
+                // Get form values
+                var username = document.getElementById('Uname').value;
+                var age = document.getElementById('Age').value;
+                // Get values for other fields
+        
+                // Validate that no field is empty
+                if (username.trim() === '' || age.trim() === '') {
+                    alert('Please fill in all details.');
+                    return;
+                }
+        
+                // If all validations pass, redirect to the next page
+                window.location.href = 'Home.html';
+            }
+        </script>
+
+</body>
+</html>
